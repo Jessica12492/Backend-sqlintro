@@ -1,14 +1,25 @@
 (1) Using the Customer Table, select the CustomerName, ContactName, and Country.  Use ORDER BY to order by Country.  
 Use LIMIT and OFFSET to get entries 11 through 20. Paste your SQL statement below. 
+SELECT CustomerName, ContactName, Country FROM Customers;
+SELECT Country FROM Customers ORDER BY Country;
+SELECT CustomerName, ContactName, Country FROM Customers LIMIT 10 OFFSET 10;
 
 (2) Select all columns from the Customer table where the ContactName starts with A.  Paste your SQL statement below.
 
+SELECT * FROM Customers WHERE ContactName LIKE "A%" ; 
+
 (3) Select all columns from the OrderDetails table where the ProductID is 51 and the quantity is greater than 10.
 Paste your SQL statement below.
+SELECT * FROM OrderDetails WHERE ProductID = 51 AND quantity >"10"; 
 
 (4) Insert 3 rows into the Products table.  Note that you will have to specify a valid SupplierID and CategoryID, 
 corresponding to rows from the Supplier and Category tables.  Paste your three SQL statements below.
+INSERT INTO products VALUES (78,"bread",2,2,"4 boxes",9.99);
+INSERT INTO products VALUES (79,"peanuts",4,9,"14 boxes",16.99);
+INSERT INTO products VALUES (80,"milk",1,2,"3 boxes",5.99);
 
 (5) Update the two top rows of the Products Table to increase the price by 1.50. (Get SQL to do the addition for you.)  Paste your SQL statement below.
+UPDATE Products SET SupplierID =0 , CategoryID=1 WHERE price> 1.50;
 
 (6) Delete all rows of the Products Table where the price is less than 7.00. Paste your SQL statement below.
+DELETE  FROM Products WHERE Price< 7.00;
